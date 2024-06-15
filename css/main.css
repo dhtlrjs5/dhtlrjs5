@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&family=Sail&display=swap');
+body {
+    position: relative;
+    background-image: url(../image/test.jpg);
+    background-size: cover;
+    background-color: #AB88A0;
+}
+
+.menu * {
+    display: inline;
+}
+
+.menu li {
+    margin: 35px;
+}
+
+.menu li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.menu ul {
+    padding-left: 0px;
+}
+
+.menu {
+    text-shadow: 3px 3px 5px #000;
+    font-size: 23px;
+    font-style: italic;
+    font-weight: 550;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+} 
+
+.logo{
+    width: 100%;    
+}
+
+.profile {
+    border-radius: 30%;
+    display: inline-block;
+    padding: 0.5rem;
+    margin-top: 20px;
+    border: 1px solid gray;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgb(255, 255, 255, 0.5);
+}
+
+.profile2 {
+    border-radius: 30%;
+    display: inline-block;
+    padding: 0.5rem;
+    border: 1px solid gray;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    
+}
+
+.profile3 {
+    border-radius: 30%;
+    display: inline-block;
+    padding: 0.5rem;
+    border: 1px solid gray;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgb(255, 255, 255, 0.5);
+}
+
+.profile3:hover{
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+}
+
+.profile img {
+    border-radius: 30%;
+}
+
+.lists {
+    text-align: center;
+    font-family: 'Pretendard-Thin';
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Pretendard-Thin';
+    font-size: 18px;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.one {
+    background-size: cover;
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 150px;
+}
+
+.emoticon {
+    font-size: 36px;
+}
+
+.emoticon:hover {
+    font-size: 44px;
+    cursor: pointer;
+}
+
+.main_text_title {
+    font-size: 20px;
+    color: white;
+    text-shadow: 3px 3px 5px #000;
+}
+
+.main_text {
+    font-size: 17px;
+    color: white;
+    
+}

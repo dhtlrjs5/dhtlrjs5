@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OhSigeon's Term Project about me</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/aboutme.css">
+    <link rel="stylesheet" href="./css/hobby.css">
+    <link rel="stylesheet" href="./css/movie.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .menu ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        .menu ul li {
+            margin: 0 15px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .section {
+            text-align: center;
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .title_font, .header {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href = "main.html" <b>Main</b></a></li>
+                <li><a href = "aboutme.html" <b>About Me</b></a></li>
+                <li><a href = "hobby.html" <b>Hobby</b></a></li>
+                <li><a href = "hobby2.html" <b>Hobby2</b></a></li>
+                <li><a href = "hobby3.html" <b>Hobby3</b></a></li>
+                <li><a href = "quiz.html" <b>Quiz</b></a></li>
+                <li><a href = "contact.html" <b>Farewell</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="title_font">
+        <div class="header">
+            <h1>My favorite movie is...</h1>
+        </div>
+        <div class="container">
+            <div class="image-container">
+                <div class="section">
+                    <img src="./image/movie1.png" alt="Image 1" class="profile2" onclick="playVideo('https://www.youtube.com/embed/jrQ-pInzXHE?si=3ayLS3opF_LwN-Ph')">
+                    <p>1번 영화</p>
+                </div>
+                <div class="section">
+                    <img src="./image/movie2.png" alt="Image 2" class="profile2" onclick="playVideo('https://www.youtube.com/embed/4VsGsYSOxAc?si=UQirxXqonhu-I6Em')">
+                    <p>2번 영화</p>
+                </div>
+                <div class="section">
+                    <img src="./image/movie3.png" alt="Image 3" class="profile2" onclick="playVideo('https://www.youtube.com/embed/-AZ7cnwn2YI?si=6-XMT67M1G1Bjhv1')">
+                    <p>3번 영화</p>
+                </div>
+            </div>
+        </div>
+        <div class="video-container">
+            <iframe id="youtubeVideo" width="560" height="315" src="https://www.youtube.com/embed/jrQ-pInzXHE?si=3ayLS3opF_LwN-Ph" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <button onclick="changeVideo()">다른 영상 보기</button>
+        </div>
+        <script src="./javascript/movie.js"></script>
+        <div style="text-align: center;">
+            <p>한국영화를 좋아합니다. </p>
+            <p>그중에서도 주인공이 강력한 영화를 즐겨봅니다.</p>
+            <p>&nbsp;</p>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OhSigeon's Term Project hobby3</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/aboutme.css">
+    <link rel="stylesheet" href="./css/hobby.css">
+    <link rel="stylesheet" href="./css/movie.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .menu ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        .menu ul li {
+            margin: 0 15px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .section {
+            text-align: center;
+        }
+        .audio-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .audio-container div {
+            margin-bottom: 10px;
+        }
+        .audio-container input {
+            width: 200px;
+        }
+        .header, .title_font {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="main.html"><b>Main</b></a></li>
+                <li><a href="aboutme.html"><b>About Me</b></a></li>
+                <li><a href="hobby.html"><b>Hobby</b></a></li>
+                <li><a href="hobby2.html"><b>Hobby2</b></a></li>
+                <li><a href="hobby3.html"><b>Hobby3</b></a></li>
+                <li><a href="quiz.html"><b>Quiz</b></a></li>
+                <li><a href="contact.html"><b>Farewell</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="title_font">
+        <div class="header">
+            <h1>My favorite music is...</h1>
+        </div>
+        <div class="container">
+            <div class="image-container">
+                <div class="section">
+                    <img src="./image/music1.jfif" alt="Image 1" class="profile2" onclick="playAudio('audio1')">
+                    <p>1번 음악</p>
+                </div>
+                <div class="section">
+                    <img src="./image/music2.png" alt="Image 2" class="profile2" onclick="playAudio('audio2')">
+                    <p>2번 음악</p>
+                </div>
+                <div class="section">
+                    <img src="./image/music3.jfif" alt="Image 3" class="profile2" onclick="playAudio('audio3')">
+                    <p>3번 음악</p>
+                </div>
+                <div class="section">
+                    <img src="./image/music4.jfif" alt="Image 4" class="profile2" onclick="playAudio('audio4')">
+                    <p>4번 음악</p>
+                </div>
+                <div class="section">
+                    <img src="./image/music5.jfif" alt="Image 5" class="profile2" onclick="playAudio('audio5')">
+                    <p>5번 음악</p>
+                </div>
+            </div>
+        </div>
+        <div class="audio-container">
+            <audio id="audio1" src="./audio/One Call Away.mp3"></audio>
+            <audio id="audio2" src="./audio/Attention.mp3"></audio>
+            <audio id="audio3" src="./audio/10,000 Hours (with Justin Bieber).mp3"></audio>
+            <audio id="audio4" src="./audio/comethru.mp3"></audio>
+            <audio id="audio5" src="./audio/What Makes You Beautiful.mp3"></audio>
+            <div>
+                <label for="volumeSlider">볼륨 조절</label>
+            </div>
+            <div>
+                <input type="range" min="0" max="1" step="0.01" value="1" id="volumeSlider" onchange="changeVolume(this.value)">
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <button onclick="stopAudio()">모든 음악 정지</button>
+        </div>
+        <script>
+            function playAudio(audioId) {
+                // Stop any currently playing audio
+                stopAudio();
+
+                // Play the selected audio
+                var audio = document.getElementById(audioId);
+                if (audio) {
+                    audio.play();
+                }
+            }
+
+            function stopAudio() {
+                var audios = document.querySelectorAll('audio');
+                audios.forEach(function(audio) {
+                    audio.pause();
+                    audio.currentTime = 0;
+                });
+            }
+
+            function changeVolume(volume) {
+                var audios = document.querySelectorAll('audio');
+                audios.forEach(function(audio) {
+                    audio.volume = volume;
+                });
+            }
+        </script>
+        <div>
+            <h1>&#128683;주의&#128683;</h1><h2>소리가 크게 나올 수 있으므로 볼륨을 낮추고 음악을 재생해 주세요.</h2>
+            <p>제가 최근에 가장 즐겨듣는 음악 5곡입니다!</p>
+        </div>
+    </main>
+</body>
+</html>

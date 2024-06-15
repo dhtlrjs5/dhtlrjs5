@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OhSigeon's Term Project</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/scroll.css">
+    <link rel="stylesheet" href="./css/aboutme.css">
+    <link rel="stylesheet" href="./css/hobby.css">
+    <link rel="stylesheet" href="./css/quiz.css">
+    <link rel="stylesheet" href="./css/button.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+        
+        html, body {
+            height: 100%;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+        }
+
+        section {
+            height: 100vh; /* Viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#main" <b>Main</b></a></li>
+                    <li><a href="#aboutme" <b>About Me</b></a></li>
+                    <li><a href="#hobby" <b>Hobby</b></a></li>
+                    <li><a href="#quiz" <b>Quiz</b></a></li>
+                    <li><a href="#contact" <b>Contact</b></a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="main">
+            <div class="list">
+                <div class="one">
+                    <span class="profile"><img id='change_profile' src="./image/temp_images/1705213234690.jpg" width="550px;" height="550px" alt="main"/></span>
+                    <p></p>
+                    <span class="emoticon" onclick="changeImage1()">☝ &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span class="emoticon" onclick="changeImage2()">☝ &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span class="emoticon" onclick="changeImage3()">☝</span>
+                    <script src="./javascript/change_image.js"></script>
+                    <h2 class="main_text_title"><strong>웹프로그래밍 Term Project</strong></h2> 
+                    <h3 class="main_text">안녕하세요!😀 가천대학교에서 컴퓨터공학을 전공하고있는 오시건입니다.</h3>
+                </div>
+            </div> 
+        </section>
+        <section id="aboutme">
+            <div>
+                <div class="left_side1">
+                    <img src="./image/MBTI.png" width="100%" height="100%" class="profile2" target="if_a" onclick="changeIframe1()">
+                </div>
+                <div class="left_side2">
+                    <img src="./image/department.png" width="100%" height="100%" class="profile2" target="if_a" onclick="changeIframe2()">
+                </div>
+                <div class="right_side1">
+                    <img src="./image/shcedule.png" width="100%" height="100%" class="profile2" target="if_a" onclick="changeIframe4()">
+                </div>
+                <div class="right_side2">
+                    <img src="./image/whoami.png" width="100%" height="100%" class="profile2" target="if_a" onclick="changeIframe3()">
+                </div>
+                <iframe id="change_iframe" class="middle-iframe" src="./introduce.html" width="700" height="500" name="if_a" frameborder="0"></iframe>
+                <script src="./javascript/change_image.js"></script>
+            </div>
+        </section>
+        <section id="hobby">
+            <div class="header">
+                <h1>My hobby is...</h1>
+            </div>
+            <div class="container"> 
+                <div class="sections">
+                    <div class="section">
+                        <img src="./image/coding.gif" alt="Image 1" class="profile2">
+                        <p>코딩 하기</p>
+                    </div>
+                    <div class="section">
+                        <img src="./image/movie.gif" alt="Image 2" class="profile2">
+                        <p>영화 보기</p>
+                    </div>
+                    <div class="section">
+                        <img src="./image/eat.gif" alt="Image 3" class="profile3" id="imageA">
+                        <p>맛집 탐방 하기<br>(사진을 눌러 보세요!)</p>
+                    </div>
+                    <div class="section">
+                        <img src="./image/drink.gif" alt="Image 4" class="profile2">
+                        <p>맛있는 술 마시기</p>
+                    </div>
+                    <div class="section">
+                        <img src="./image/sing.gif" alt="Image 5" class="profile2">
+                        <p>음악 듣기</p>
+                    </div>
+                </div>
+            </div>  
+            <div class="container2">
+                <div class="section">
+                    <img src="./image/food/sushi1.jpg" class="profile2" id="food">
+                </div>
+            </div>
+            <script src="./javascript/change_image.js"></script>
+        </section>
+        <section id="quiz">
+            <div class="grid">
+                <div id="quiz">
+                   <p id="question"></p>
+                   <div class="buttons">
+                      <button class="btn"></button>
+                      <button class="btn"></button>
+                      <button class="btn"></button>
+                      <button class="btn"></button>
+                   </div>
+                   <footer>
+                      <p id="progress">진행 정보</p>
+                   </footer>
+                </div>
+                <script src="./javascript/quiz.js"></script>
+             </div>
+             <div class="divcenter">
+                <a href="./quiz.html" title="Button push lightblue" class="button btnPush btnLightBlue">다시하기</a>
+             </div>
+        </section>
+    </div>
+</body>
+</html>

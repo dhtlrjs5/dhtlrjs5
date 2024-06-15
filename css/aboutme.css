@@ -1,0 +1,100 @@
+body {
+    position: relative;
+    background-image: url(../image/test.jpg);
+    background-size: cover;
+    background-color: #AB88A0;
+}
+
+header{
+	margin: 10px auto;	
+	padding: 5px;
+	width: 700px;
+	height: 100px;
+} 
+
+main{
+    position: relative;
+	margin: 0 auto;
+	padding: 20px 0 20px 0; 
+	width: 100%;
+    height: 500px;
+}
+
+.left_side1 {
+    width: 150px;
+    height: 150px;
+    top: 13%;
+    left: 7%;
+    position: absolute;
+}
+
+.left_side1:hover {
+    width: 180px;
+    height: 180px;
+    top: 12%;
+    left: 6%;
+    cursor: pointer;
+}
+
+.left_side2 {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    left: 7%;
+    position: absolute;
+}
+
+.left_side2:hover {
+    width: 180px;
+    height: 180px;  
+    top: 59%;
+    left: 6%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.right_side1 {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    right: 7%;
+    position: absolute;
+}
+
+.right_side1:hover {
+    width: 180px;
+    height: 180px;
+    top: 59%;
+    right: 6%;
+    position: absolute;
+    cursor: pointer;    
+}
+
+.right_side2 {
+    width: 150px;
+    height: 150px;
+    top: 13%;
+    right: 7%;
+    position: absolute;
+}
+
+.right_side2:hover {
+    width: 180px;
+    height: 180px;
+    top: 12%;
+    right: 6%;
+    position: absolute;
+    cursor: pointer;   
+}
+
+.middle{
+    width: 50%;
+    background-color: blue;
+}
+
+.middle-iframe{
+    background-color: white;
+}
+
+
+
